@@ -49,7 +49,7 @@ trainY = lb.transform (trainY)
 testY = lb.transform (testY)
 
 print("[INFO] compiling model...")
-model = LeNet.build(width = 28, height = 28, depth = 1, classes = 9)
+model = LeNet.build(width = 28, height = 28, depth = 1, classes = 3) # cái classes chỗ này nhớ thay đổi nha ae hơi nguy hiểm á
 opt = SGD(lr = 0.01)
 model.compile(loss = "categorical_crossentropy", optimizer = opt, metrics = ["accuracy"])
 
