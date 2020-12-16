@@ -5,10 +5,10 @@ from imutils import contours
 import numpy as np
 import cv2
 
-cv2.namedWindow('check', cv2.WINDOW_NORMAL)
+cv2.namedWindow('Output', cv2.WINDOW_NORMAL)
 
-model = load_model("output/fruit.hdf5")
-image = cv2.imread("test/khe.jpg")
+model = load_model("output/lenet.hdf5")
+image = cv2.imread("test/5.png")
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 gray = cv2.copyMakeBorder(gray, 20, 20, 20, 20, cv2.BORDER_REPLICATE)
 thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
